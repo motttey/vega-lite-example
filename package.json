@@ -8,6 +8,9 @@
   "dependencies": {
     "next": "^12.1.6",
     "react": "^18.1.0",
-    "react-dom": "^18.1.0"
+    "react-dom": "^18.1.0",
+    "vega": "^5.22.1",
+    "vega-embed": "^6.20.8",
+    "vega-lite": "^5.2.0"
   }
 }
