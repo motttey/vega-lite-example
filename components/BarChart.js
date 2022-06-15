@@ -1,7 +1,7 @@
 import React from 'react';
 import embed from 'vega-embed';
 
-function BarChart () {
+function BarChart (props) {
   const getBarChart = (
     data, wigth, height
   ) => {
@@ -10,7 +10,7 @@ function BarChart () {
       "description": "A basic bar chart example, with value labels shown upon mouse hover.",
       "width": wigth,
       "height": height,
-      "padding": 5,
+      "padding": 10,
 
       "data": data,
 
@@ -68,6 +68,7 @@ function BarChart () {
         },
         {
           "type": "text",
+          "fontSize": 16,
           "encode": {
             "enter": {
               "align": {"value": "center"},
@@ -100,13 +101,18 @@ function BarChart () {
         {"category": "E", "amount": 81},
         {"category": "F", "amount": 53},
         {"category": "G", "amount": 19},
-        {"category": "H", "amount": 87}
+        {"category": "H", "amount": 87},
+        {"category": "I", "amount": 93},
+        {"category": "J", "amount": 109},
+        {"category": "K", "amount": 87}
       ]
     }
   ]
 
   embed('#barchart', getBarChart(
-    data, 400, 400
+    data,
+    props.width,
+    props.height
   )).then((result) => {
     console.log(result);
   }).catch((e) => {});

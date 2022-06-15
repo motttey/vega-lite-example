@@ -1,10 +1,16 @@
 import embed from 'vega-embed';
 import BarChart from '../components/BarChart.js'
 
-function HomePage() {
+function HomePage(props) {
+  const width = 800;
+  const height = 500;
+
   return (
     <div>
-      <BarChart />
+      <BarChart
+        width={width}
+        height={height}
+      />
     </div>
   )
 }
