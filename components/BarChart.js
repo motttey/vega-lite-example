@@ -1,14 +1,15 @@
 import React from 'react';
 import embed from 'vega-embed';
+import Chart from './Chart.js'
 
 function BarChart (props) {
   const getBarChart = (
-    data, wigth, height
+    data, width, height
   ) => {
     return {
       "$schema": "https://vega.github.io/schema/vega/v5.json",
       "description": "A basic bar chart example, with value labels shown upon mouse hover.",
-      "width": wigth,
+      "width": width,
       "height": height,
       "padding": 10,
 
@@ -118,7 +119,14 @@ function BarChart (props) {
   }).catch((e) => {});
 
   return (
-    <div id="barchart" />
+    <Chart
+      componentName="barchart"
+      json={getBarChart(
+        data,
+        props.width,
+        props.height
+      )}
+    />
   )
 }
 
