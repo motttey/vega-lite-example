@@ -1,5 +1,4 @@
 import React from 'react';
-import embed from 'vega-embed';
 import Chart from './Chart.js'
 
 function BarChart (props) {
@@ -109,14 +108,6 @@ function BarChart (props) {
       ]
     }
   ]
-
-  embed('#barchart', getBarChart(
-    data,
-    props.width,
-    props.height
-  )).then((result) => {
-    console.log(result);
-  }).catch((e) => {});
 
   return (
     <Chart

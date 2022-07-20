@@ -1,5 +1,4 @@
 import React from 'react';
-import embed from 'vega-embed';
 import Chart from './Chart.js'
 
 function HorizonChart (props) {
