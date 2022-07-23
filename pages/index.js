@@ -1,5 +1,5 @@
-import embed from 'vega-embed';
 import BarChart from '../components/BarChart.js'
+import ConnectedScatterPlot from '../components/ConnectedScatterPlot.js';
 import HorizonChart from '../components/HorizonChart.js'
 
 function HomePage(props) {
@@ -13,6 +13,10 @@ function HomePage(props) {
         height={height}
       />
       <HorizonChart
+        width={width}
+        height={height/2}
+      />
+      <ConnectedScatterPlot
         width={width}
         height={height/2}
       />
