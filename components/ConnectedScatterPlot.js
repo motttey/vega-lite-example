@@ -9,11 +9,10 @@ function ConnectedScatterPlot (props) {
         for (let i = 1900; i < 2000; i++) {
             x = x + 2 * (Math.random() -  0.5)
             y = y + 5 * (Math.random() -  0.5)
-            data.push({ year: 1, x: x, y: y })
+            data.push({ year: i, x: x, y: y })
         }
         return {
-            "name": "line",
-            "values": data
+            values: data
         }
     }
 
@@ -25,28 +24,31 @@ function ConnectedScatterPlot (props) {
             "data": data,
             "width": width,
             "height": height,
-            "mark": {"type": "line", "point": true},
             "encoding": {
                 "x": {
-                    "field": "x", 
-                    "type": "quantitative",
-                    "scale": {"zero": false}
+                    "field": "miles", 
+                    "type": "linear",
+                    "scale": {"zero": false},
+                    "range": "width"
                 },
                 "y": {
-                    "field": "y", 
-                    "type": "quantitative",
-                    "scale": {"zero": false}
+                    "field": "gas", 
+                    "type": "linear",
+                    "scale": {"zero": false},
+                    "range": "height"
                 },
                 "order": {"field": "year"}
             }
         }
     }
 
+    const data = getData()
+
     return (
         <Chart
             componentName="connectedscatterplot"
             json={getConnectedScatterPlot(
-                getData(),
+                data,
                 props.width,
                 props.height
             )}
