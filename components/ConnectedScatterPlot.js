@@ -1,8 +1,14 @@
 import React from 'react';
-import Chart from './Chart.js'
+import Chart from './Chart.js';
+import PropTypes from 'prop-types';
+
+ConnectedScatterPlot.propTypes = {
+    width: PropTypes.number,
+    height: PropTypes.number
+}
 
 function ConnectedScatterPlot (props) {
-    const getData  = () => {
+    const getData = () => {
         const data = []
         let x = 10;
         let y = 25;

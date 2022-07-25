@@ -1,5 +1,11 @@
 import React from 'react';
-import Chart from './Chart.js'
+import Chart from './Chart.js';
+import PropTypes from 'prop-types';
+
+HorizonChart.propTypes = {
+  width: PropTypes.number,
+  height: PropTypes.number
+}
 
 function HorizonChart (props) {
   const getHorizonChart = (

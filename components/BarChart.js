@@ -1,6 +1,13 @@
 import React from 'react';
 import Chart from './Chart.js'
 
+import PropTypes from 'prop-types';
+
+BarChart.propTypes = {
+  width: PropTypes.number,
+  height: PropTypes.number
+}
+
 function BarChart (props) {
   const getBarChart = (
     data, width, height

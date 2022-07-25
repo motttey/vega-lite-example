@@ -1,11 +1,22 @@
 import React from 'react';
 import embed from 'vega-embed';
+import PropTypes from 'prop-types';
+
+Chart.propTypes = {
+  componentName: PropTypes.string,
+  json: PropTypes.any
+}
 
 function Chart (props) {
-  embed(`#${props.componentName}`, props.json)
+  if (typeof window === 'object') {
+    //documentを使う関数を入れる
+    embed(`#${props.componentName}`, props.json)
     .then((result) => {
       console.log(result);
-    }).catch((e) => {});
+    }).catch((e) => {
+      console.log(e);
+    });
+  }
 
   return (
     <div
