@@ -5,22 +5,22 @@ import PropTypes from 'prop-types';
 ConnectedScatterPlot.propTypes = {
     width: PropTypes.number,
     height: PropTypes.number
-}
+};
 
 function ConnectedScatterPlot (props) {
     const getData = () => {
-        const data = []
+        const data = [];
         let x = 10;
         let y = 25;
         for (let i = 1900; i < 2000; i++) {
-            x = x + 2 * (Math.random() -  0.5)
-            y = y + 5 * (Math.random() -  0.5)
-            data.push({ year: i, x: x, y: y })
+            x = x + 2 * (Math.random() -  0.5);
+            y = y + 5 * (Math.random() -  0.5);
+            data.push({ year: i, x: x, y: y });
         }
         return {
             values: data
-        }
-    }
+        };
+    };
 
     const getConnectedScatterPlot = (
         data, width, height
@@ -45,10 +45,10 @@ function ConnectedScatterPlot (props) {
                 },
                 "order": {"field": "year"}
             }
-        }
-    }
+        };
+    };
 
-    const data = getData()
+    const data = getData();
 
     return (
         <Chart
@@ -59,7 +59,7 @@ function ConnectedScatterPlot (props) {
                 props.height
             )}
         />
-    )
+    );
 }
 
-export default ConnectedScatterPlot
+export default ConnectedScatterPlot;

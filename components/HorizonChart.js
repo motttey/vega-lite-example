@@ -5,7 +5,7 @@ import PropTypes from 'prop-types';
 HorizonChart.propTypes = {
   width: PropTypes.number,
   height: PropTypes.number
-}
+};
 
 function HorizonChart (props) {
   const getHorizonChart = (
@@ -44,8 +44,8 @@ function HorizonChart (props) {
       "config": {
         "area": {"interpolate": "monotone"}
       }
-    }
-  }
+    };
+  };
 
   const data = {
     "values": [
@@ -60,7 +60,7 @@ function HorizonChart (props) {
       {"x": 17, "y": 68}, {"x": 18, "y": 16},
       {"x": 19, "y": 49}, {"x": 20, "y": 15}
     ]
-  }
+  };
 
   return (
     <Chart
@@ -71,7 +71,7 @@ function HorizonChart (props) {
         props.height
       )}
     />
-  )
+  );
 }
 
-export default HorizonChart
+export default HorizonChart;

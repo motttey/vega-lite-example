@@ -1,8 +1,9 @@
-import BarChart from '../components/BarChart.js'
+import BarChart from '../components/BarChart.js';
 import ConnectedScatterPlot from '../components/ConnectedScatterPlot.js';
-import HorizonChart from '../components/HorizonChart.js'
+import HorizonChart from '../components/HorizonChart.js';
+import React from 'react';
 
-function HomePage(props) {
+function HomePage() {
   const width = 800;
   const height = 500;
 
@@ -21,7 +22,7 @@ function HomePage(props) {
         height={height/2}
       />
     </div>
-  )
+  );
 }
 
-export default HomePage
+export default HomePage;

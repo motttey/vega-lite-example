@@ -1,12 +1,12 @@
 import React from 'react';
-import Chart from './Chart.js'
+import Chart from './Chart.js';
 
 import PropTypes from 'prop-types';
 
 BarChart.propTypes = {
   width: PropTypes.number,
   height: PropTypes.number
-}
+};
 
 function BarChart (props) {
   const getBarChart = (
@@ -94,8 +94,8 @@ function BarChart (props) {
           }
         }
       ]
-    }
-  }
+    };
+  };
 
   const data = [
     {
@@ -114,7 +114,7 @@ function BarChart (props) {
         {"category": "K", "amount": 87}
       ]
     }
-  ]
+  ];
 
   return (
     <Chart
@@ -125,7 +125,7 @@ function BarChart (props) {
         props.height
       )}
     />
-  )
+  );
 }
 
-export default BarChart
+export default BarChart;

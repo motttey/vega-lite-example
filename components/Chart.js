@@ -5,7 +5,7 @@ import PropTypes from 'prop-types';
 Chart.propTypes = {
   componentName: PropTypes.string,
   json: PropTypes.any
-}
+};
 
 function Chart (props) {
   if (typeof window === 'object') {
@@ -22,7 +22,7 @@ function Chart (props) {
     <div
       id={props.componentName}
     />
-  )
+  );
 }
 
-export default Chart
+export default Chart;
