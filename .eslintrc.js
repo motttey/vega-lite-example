@@ -21,5 +21,10 @@ module.exports = {
     ],
     "rules": {
         "semi": ["warn", "always"]
+    },
+    "settings": {
+        "react": {
+          "version": "detect"
+        }
     }
 };
