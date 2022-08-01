@@ -20,11 +20,12 @@ module.exports = {
         "react"
     ],
     "rules": {
-        "semi": ["warn", "always"]
+        "semi": ["warn", "always"],
+        "indent": ["warn", 4]
     },
     "settings": {
         "react": {
-          "version": "detect"
+            "version": "detect"
         }
     }
 };
