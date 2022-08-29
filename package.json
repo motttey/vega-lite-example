@@ -7,9 +7,9 @@
     "lint:fix": "eslint ./ --ext .js,jsx --fix"
   },
   "dependencies": {
-    "next": "^12.1.6",
-    "react": "^18.1.0",
-    "react-dom": "^18.1.0",
+    "next": "^12.2.5",
+    "react": "^18.2.0",
+    "react-dom": "^18.2.0",
     "vega": "^5.22.1",
     "vega-embed": "^6.20.8",
     "vega-lite": "^5.2.0"
