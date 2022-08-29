@@ -76,7 +76,7 @@ function LayerdChart (props) {
                     y: y,
                     type: type 
                 });
-            })
+            });
         }
         return {
             values: data
@@ -85,7 +85,7 @@ function LayerdChart (props) {
 
     return (
         <Chart
-            componentName="horizongraph"
+            componentName="layeredchart"
             json={getLayerdChart(
                 getData(),
                 props.width,
