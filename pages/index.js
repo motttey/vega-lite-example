@@ -3,6 +3,7 @@ import HorizonChart from '../components/HorizonChart.js';
 import React from 'react';
 import QuantileDotPlot from '../components/QuantileDotPlot.js';
 import LayerdChart from '../components/LayerdChart.js';
+import WordCloud from '../components/WordCloud.js';
 
 function HomePage() {
     const width = 800;
@@ -23,6 +24,10 @@ function HomePage() {
                 height={height/2}
             />
             <LayerdChart
+                width={width}
+                height={height/2}
+            />
+            <WordCloud
                 width={width}
                 height={height/2}
             />
